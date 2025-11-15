@@ -76,6 +76,42 @@ def calcular_promedio_ponderado():
         break;
 
 
+def promedio_notas():
+    while True:
+        try:
+            cantidad_notas = int(input("¿Cuántas notas vas a ingresar?: "))
+
+            if cantidad_notas <= 0:
+                print("Error: Debes ingresar al menos una nota.")
+                return
+        except:
+            print("Error: Ingresa un número entero válido (ej: 4).")
+            return
+        
+        ListaNotas = []
+        print("\n--- 2. Ingreso de Notas ---")
+
+        for i in range(cantidad_notas):
+            try:
+
+                nota = float(input(f" Ingresa la Nota {i + 1}: "))
+
+                if (nota < 1 or nota > 7.0):
+                    print("Error: La nota debe ser entre 1.0 y 7.0")
+                    return
+
+                ListaNotas.append(nota)
+
+            except:
+                print("Error: Ingresa un número válido para la nota.")
+                return
+
+        print("\n--- Cálculo Finalizado ---")
+        resultadoPromedio = sum(ListaNotas)/ cantidad_notas
+        print(f"Tu Nota Final Promediada es: {round(resultadoPromedio,1)}")
+        break;
+        
+
 def main ():
     try:
         while True:
