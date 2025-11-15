@@ -18,16 +18,43 @@ def main ():
             
             if r==1:
                 print ("*"*61,"!Notas Ponderadas¡","*"*61)
-            
+
+                try:
+                    res=input("¿Desea salir del programa? (SI/S | NO/N):").upper()
+                    if (res=="SI" or res=="S"):
+                        print ("Saliendo...")
+                        break;
+                    elif (res=="NO" or res=="N"):
+                        print ("")
+                    else:
+                        print("!Ingrese una respuesta correcta¡")
+                except:
+                    print ("ERROR: !Ingrese una respuesta correcta¡")
+
             elif r==2:
                 print ("*"*61,"!Notas Promediadas¡","*"*60)
 
+                try:
+                    res=input("¿Desea salir del programa? (SI/S | NO/N):").upper()
+                    if (res=="SI" or res=="S"):
+                        print ("Saliendo...")
+                        break;
+                    elif (res=="NO" or res=="N"):
+                        print ("")
+                    else:
+                        print("!Ingrese una respuesta correcta¡")
+                except:
+                    print ("ERROR: !Ingrese una respuesta correcta¡")
+
             elif r == 3:
+
                 print ("Saliendo del programa...")
                 time.sleep(1.5)
                 break;
+            
             else:
                 print("!Ingresa una opcion¡");
+    
     except:
         print("Error: !Ingresa una opcion valida¡")
         return
