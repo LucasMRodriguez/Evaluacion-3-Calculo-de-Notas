@@ -1,0 +1,33 @@
+import time
+
+def main ():
+    try:
+        while True:
+            print ("-"*142)
+            print ("="*55,'Bienvenido al calculo de notas',"="*55)
+            print ("-"*142)
+
+            print ("="*68, 'MENÚ', "="*68)
+            print ("-"*142)
+            print ("-"*12,"Opcion 1. Ingreso de notas Ponderadas   |    Opcion 2. Ingreso de notas Promedio   |    Opcion 3. Salir del Programa","-"*12)
+            print ("-"*142)
+
+            print("")
+            r = int(input("Ingrese una opcion (1,2 o 3): "))
+            print("")
+            
+            if r==1:
+                print ("*"*61,"!Notas Ponderadas¡","*"*61)
+            
+            elif r==2:
+                print ("*"*61,"!Notas Promediadas¡","*"*60)
+
+            elif r == 3:
+                print ("Saliendo del programa...")
+                time.sleep(1.5)
+                break;
+            else:
+                print("!Ingresa una opcion¡");
+    except:
+        print("Error: !Ingresa una opcion valida¡")
+        return
